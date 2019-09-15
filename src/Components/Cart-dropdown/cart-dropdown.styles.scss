@@ -17,10 +17,28 @@
         height:240px;
         display:flex;
         flex-direction:column;
-        overflow:scroll;
+
+        //custom scroll
+        overflow-y:scroll;
+
+        /* width */
+        &::-webkit-scrollbar {
+            width: 8px;
+            color:black;
+            border-radius:12px;
+        }
+        
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background:black;
+        }
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background:grey;
+        }
     }
 
     .button{
-        margin-top:auto;
+        margin-top:12px;
     }
 }

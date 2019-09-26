@@ -8,10 +8,10 @@ import {
 
 import CollectionItem from ".././Collection-item/Collection-item.component";
 
-const CollectionPreview = ({ title, items }) => {
+const CollectionPreview = ({ title, items,history}) => {
   return (
     <CollectionPreviewContainer>
-      <TitleContainer>{title}</TitleContainer>
+      <TitleContainer onClick={()=> history.push(`/${title}`)}>{title}</TitleContainer>
       <PreviewContainer>
         {items
           .filter((item, index) => index < 4)
